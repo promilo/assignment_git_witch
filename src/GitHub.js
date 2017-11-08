@@ -2,6 +2,7 @@ const request = require('request');
 const Github = require('github');
 const env = require('node-env-file');
 require('dotenv').config();
+const token = process.env.TOKEN
 
 
 const url = 'https://api.github.com/users'
@@ -15,7 +16,7 @@ class Github {
     // })
 
   }
-  getRepos(){
+  repos(){
     return [
       {
       name: "Code-Coven",
@@ -27,7 +28,7 @@ class Github {
     }
   ]
   }
-  getStarredRepos(){
+  starredRepos(){
     return [
       {
         name: "Eye-Of-Newt",
