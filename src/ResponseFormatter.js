@@ -16,18 +16,17 @@ class ResponseFormatter{
   format(obj) {
     // obj = {
     //   username: username
-    //   subject: stars or repos
+    //   subject: stars or repos // but will filter it before calling the format.
     //   query: details or count
-    //   repos: list of repos
+    //   repos: list of repos/number of repos
     // }
 
 
     let string = ""
     if (obj.query === "details"){
-      string += obj.username + obj.subject
-      obj.repos.forEach( repo => {
-      string += repo
-      string += '\n'
+      let collectionRepos = listRepos(obj.repos);
+      string += collectionRepos
+      return string
     })
       }else {
         return `the user ${obj.username} has ${obj.repos} ${obj.subject}`
