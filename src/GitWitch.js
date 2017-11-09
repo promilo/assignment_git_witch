@@ -4,17 +4,23 @@ const ResponseFormatter = require('./ResponseFormatter')
 
 
 class GitWitch{
-  constructor(input){
-    this.input = input
+  constructor(){
+
   }
 
-  process(){
+  process(input){
     // process (process.env), concatenate them into a string, and then pass them along to gitWitch.process().
-    return ""
-  }
-  parser(){
     const qParser = new QuestionParser()
     let parsetoObject = qParser(input)
+    const cRunner = new CommandRunner()
+    let conversion = cRunner.run(parsetoObject)
+    const rFormatter = new ResponseFormatter()
+    let response = rFormatter.format(conversion)
+    return response
+
+  }
+  parser(){
+
   }
   runner(){
 

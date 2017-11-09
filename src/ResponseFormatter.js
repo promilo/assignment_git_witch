@@ -27,8 +27,7 @@ class ResponseFormatter{
       let collectionRepos = listRepos(obj.repos);
       string += collectionRepos
       return string
-    })
-      }else {
+    }else {
         return `the user ${obj.username} has ${obj.repos} ${obj.subject}`
     }
   }
