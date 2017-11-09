@@ -1,15 +1,15 @@
 const request = require('request');
-const Github = require('github');
-const env = require('node-env-file');
-require('dotenv').config();
+// const git = require('github');
+// const env = require('node-env-file');
+// require('dotenv').config();
 const token = process.env.TOKEN
 
 
 const url = 'https://api.github.com/users'
 
-class Github {
+class GitHub {
   constructor () {
-    // var github = newGithub()
+    // var github = new git()
     // github.authenticate({
     //   type: "token",
     //   token: || process.env.TOKEN
