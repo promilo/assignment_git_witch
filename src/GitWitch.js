@@ -2,14 +2,19 @@ const QuestionParser = require('./QuestionParser');
 const CommandRunner = require('./CommandRunner');
 const ResponseFormatter = require('./ResponseFormatter')
 
-const qParser = QuestionParser()
 
 class GitWitch{
-  constructor(){
+  constructor(input){
+    this.input = input
+  }
 
+  process(){
+    // process (process.env), concatenate them into a string, and then pass them along to gitWitch.process().
+    return ""
   }
   parser(){
-
+    const qParser = new QuestionParser()
+    let parsetoObject = qParser(input)
   }
   runner(){
 

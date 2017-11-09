@@ -6,7 +6,12 @@ class CommandRunner {
     this.git = new GitHub()
   }
   run (obj) {
-
+    // obj = {
+    //   username: rusername
+    //   subject: repos or stars
+    //   query: details or count
+    //
+    // }
     if (obj.subject === "repos"){
       if (obj.query === "details"){
         return this.git.repos(obj.username)

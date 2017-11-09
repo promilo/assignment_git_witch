@@ -4,3 +4,5 @@ const gitwitch = new GitWitch()
 
 
 const inputString = process.argv.slice(2).join(' ')
+
+const gitwitch = new GitWitch(inputString)

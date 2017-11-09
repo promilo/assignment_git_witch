@@ -6,8 +6,8 @@ getUser = (input) => {
 },
 getSubject = (input) => {
   let splitInput = input.split(' ')
-  if (splitInput[2] === "starred"){
-    return "stars"
+  if (splitInput[2] === "starred" || splitInput[1] === "starred"){
+    return "starred repos"
   } else {
     return "repos"
   }
